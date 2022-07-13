@@ -11,7 +11,7 @@ class App extends React.Component {
         this.state = {
             count: 10,
         }
-        }
+    }
     handleClickIncrementCount = () => {
         if (this.state.count < teams.length) {
             this.setState({
@@ -28,9 +28,6 @@ class App extends React.Component {
         }
     }             
 
-    
-
-
     render() {
         return (
             <div>
@@ -46,22 +43,21 @@ class App extends React.Component {
                     })
                     .map( (team) => {
                         return ( 
-                                <TeamInfo 
-                                    key={team.id}
-                                    shortName={team.shortName}
-                                    picture={team.crestUrl}
-                                    stade={team.venue}
-                                    address={team.address}
-                                    email={team.email}
-                                    tel={team.phone}
-                                    foundationDate={team.founded}
-                                />
+                            <TeamInfo 
+                                key={team.id}
+                                shortName={team.shortName}
+                                picture={team.crestUrl}
+                                stade={team.venue}
+                                address={team.address}
+                                email={team.email}
+                                tel={team.phone}
+                                foundationDate={team.founded}
+                            />
                         ) 
                     })
                 }
                 </section>
-            </div>
-            
+            </div> 
         )
     }
 }
